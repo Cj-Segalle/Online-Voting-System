@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>UVote - Messages</title>
+  <style>
+
+    /* to center message */
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ── Messages card ── */
+    .messages-card {
+      background-color: #eef0f1;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 940px;
+      height: 560px;
+      padding: 28px 36px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .messages-title {
+      font-size: 56px;
+      font-weight: 900;
+      color: #111;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .messages-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .no-message {
+      font-size: 18px;
+      font-weight: 600;
+      color: #8a9ea6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="brand" href="Home.html">
+        <img class="logo" src="Image/uVote-transparent.png" alt="Uvote Logo">
+      <span class="brand-name">UVote</span>
+    </a>
+    
+    <div class="user-info">
+      <span>User</span>
+      <div class="avatar">
+        <img src="Image/blank profile.png" alt="User Profile">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a class="nav-btn active" href="Home.html">Home</a>
+    <a class="nav-btn" href="Settings.html">Settings</a>
+    <a class="nav-btn" href="Message.html">Messages</a>
+    <a class="nav-btn" href="Schedule.html">Schedule</a>
+    <a class="nav-btn" href="requestPending.html">Request</a>
+    <div class="sidebar-spacer"></div>
+    <a class="nav-btn" href="index.html">Logout</a>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <div class="blob blob-tr"></div>
+    <div class="blob blob-bl"></div>
+
+    <div class="messages-card">
+      <h1 class="messages-title">Messages</h1>
+      <div class="messages-body">
+        <span class="no-message">No message yet</span>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>

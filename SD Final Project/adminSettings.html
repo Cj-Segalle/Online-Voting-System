@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/admin.css">
+  <title>UVote - Settings</title>
+  <style>
+  
+
+    main { flex: 1; background: #1e4a5a; padding: 20px 24px; overflow-y: auto; }
+    
+    .content-card { background: #fff; color: #111; border-radius: 12px; padding: 28px 32px; display: flex; flex-direction: column; gap: 24px; }
+    .section-title { font-size: 2.2rem; font-weight: 900; }
+    .perm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .perm-panel { background: #3a8a9a; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+
+    .search-bar { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 22px; padding: 8px 14px; border: 1px solid #ccc; }
+    .search-bar input { border: none; outline: none; font-size: 0.85rem; color: #555; flex: 1; background: transparent; }
+    .search-bar input::placeholder { color: #888; }
+
+    .perm-card { background: #fff; border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+    .perm-card-title { font-size: 1.1rem; font-weight: 900; margin-bottom: 4px; }
+    .perm-item { display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; }
+
+    /* Toggle */
+    .toggle { position: relative; display: inline-block; width: 40px; height: 22px; flex-shrink: 0; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; background: #ccc; border-radius: 22px; cursor: pointer; transition: background 0.2s; }
+    .slider::before { content: ''; position: absolute; width: 16px; height: 16px; border-radius: 50%; background: #fff; left: 3px; top: 3px; transition: transform 0.2s; }
+    input:checked + .slider { background: #3366cc; }
+    input:checked + .slider::before { transform: translateX(18px); }
+
+    .bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+    .sub-title { font-size: 1.4rem; font-weight: 900; margin-bottom: 12px; }
+    .notif-item { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; font-weight: 600; }
+    .sys-item { display: flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .sys-item input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+    .sys-footer { display: flex; justify-content: flex-end; margin-top: 8px; }
+    .btn-save { background: #3366cc; color: #fff; border: none; border-radius: 6px; padding: 12px 40px; font-size: 1.1rem; font-weight: 800; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a class="brand" href="#">
+      <div class="brand-icon">
+        <img class="logo" src="Image/uVote-transparent.png" alt="UVote Logo">
+      </div>
+      <span class="brand-name">UVote</span>
+    </a>
+    <a class="nav-item" href="adminDB.html">Home</a>
+    <a class="nav-item" href="adminUM.html">User Management</a>
+    <a class="nav-item" href="adminEM.html">Event Management</a>
+    <a class="nav-item" href="adminReq.html">Requests</a>
+    <a class="nav-item" href="adminAnalytics.html">Analytics</a>
+    <a class="nav-item active" href="adminSettings.html">Settings</a>
+  </aside>
+
+    <header class="topbar">
+    <span class="topbar-title">Requests</span>
+    <div class="topbar-right">
+      <span class="admin-name">Admin</span>
+      <div class="avatar">
+        <img src="Image/blank profile.png" alt="Admin Profile">
+      </div>
+      <a class="logout-btn" href="loginAdmin.html">Logout</a>
+    </div>
+  </header>
+
+    <main>
+      <div class="content-card">
+
+        <div class="section-title">Role Permission</div>
+
+        <div class="perm-row">
+          <div class="perm-panel">
+            <div class="search-bar"><span>&#128269;</span><input type="text" placeholder="search for an admin to modify permissions" /></div>
+            <div class="perm-card">
+              <div class="perm-card-title">Admin - Permissions</div>
+              <div class="perm-item"><span>Create, edit, and manage voting events</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Add, edit, and remove</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Approve or reject submissions</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Manage users (activate / deactivate)</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>View and export reports &amp; analytics</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Configure system settings and voting rules</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+            </div>
+          </div>
+
+          <div class="perm-panel">
+            <div class="search-bar"><span>&#128269;</span><input type="text" placeholder="search for a user to modify permissions" /></div>
+            <div class="perm-card">
+              <div class="perm-card-title">User - Permissions</div>
+              <div class="perm-item"><span>View active voting events</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Vote in available categories</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>View public results</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="perm-item"><span>Manage own profile</span><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-row">
+          <div>
+            <div class="sub-title">Notification Settings</div>
+            <div class="notif-item">Push Notifications? <label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></div>
+          </div>
+          <div>
+            <div class="sub-title">System Settings</div>
+            <div class="sys-item"><input type="checkbox" checked /> Dark Mode</div>
+            <div class="sys-item"><input type="checkbox" /> Light Mode</div>
+            <div class="sys-footer"><button class="btn-save">Save</button></div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
