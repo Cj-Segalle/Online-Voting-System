@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/request.css">
+  <title>UVote - Request</title>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="brand" href="Home.html">
+        <img class="logo" src="Image/uVote-transparent.png" alt="Uvote Logo">
+      <span class="brand-name">UVote</span>
+    </a>
+    
+    <div class="user-info">
+      <span>User</span>
+      <div class="avatar">
+        <img src="Image/blank profile.png" alt="User Profile">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a class="nav-btn active" href="Home.html">Home</a>
+    <a class="nav-btn" href="Settings.html">Settings</a>
+    <a class="nav-btn" href="Message.html">Messages</a>
+    <a class="nav-btn" href="Schedule.html">Schedule</a>
+    <a class="nav-btn" href="requestPending.html">Request</a>
+    <div class="sidebar-spacer"></div>
+    <a class="nav-btn" href="index.html">Logout</a>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="blob blob-tr"></div>
+    <div class="blob blob-bl"></div>
+
+    <div class="request-card">
+
+      <!-- Top row -->
+      <div class="top-row">
+        <span class="page-title">Request</span>
+        <div class="search-bar">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="search" />
+        </div>
+        <a class="create-btn" href="requestButton.html">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          Create Request
+        </a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <a class="tab" href="requestPending.html">Pending</a>
+        <a class="tab" href="RequestApproved.html">Approved</a>
+        <a class="tab active" href="requestRejected.html">Rejected</a>
+      </div>
+
+      <!-- Empty state -->
+      <div class="empty-state">
+        <span>No rejected request yet</span>
+      </div>
+    
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+</body>
+</html>
+

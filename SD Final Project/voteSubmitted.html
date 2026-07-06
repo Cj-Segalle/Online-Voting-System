@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>UVote - Vote Submitted</title>
+  <style>
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .success-card {
+    background:#fff;
+    border-radius:12px;
+    padding:70px 40px;
+    text-align:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.2);
+    }
+    
+.success-card h1 {
+    color:#22aa44;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.success-card p {
+    color:#333;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.btn-return {
+    display:inline-block;
+    padding:12px 40px;
+    background:#1e5a6e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:700;
+}
+
+.btn-return:hover {
+    background:#2d768d;
+}
+
+  </style>
+</head>
+<body>
+    
+    <div class="layout">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="brand" href="Home.html">
+        <img class="logo" src="Image/uVote-transparent.png" alt="Uvote Logo">
+      <span class="brand-name">UVote</span>
+    </a>
+
+    <div class="user-info">
+      <span>User</span>
+      <div class="avatar">
+        <img src="Image/blank profile.png" alt="User Profile">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a class="nav-btn active" href="Home.html">Home</a>
+    <a class="nav-btn" href="Settings.html">Settings</a>
+    <a class="nav-btn" href="Message.html">Messages</a>
+    <a class="nav-btn" href="Schedule.html">Schedule</a>
+    <a class="nav-btn" href="requestPending.html">Request</a>
+    <div class="sidebar-spacer"></div>
+    <a class="nav-btn" href="index.html">Logout</a>
+  </aside>
+
+<main class="main">
+    <div class="success-card">
+        <h1>Vote Submitted Successfully</h1>
+        <p>Check your inbox for the announcement of the winner.</p>
+
+        <a href="Home.html" class="btn-return">
+            Return
+        </a>
+    </div>
+
+</main>
+</div>
+</body>
+</html>
