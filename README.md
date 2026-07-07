@@ -7,9 +7,9 @@ BS COME
 Online Voting System
 
 Features:
-Voting
-Event Request
-Responsive User Interface
+Voting,
+Event Request,
+Responsive User Interface,
 Multi-Purpose Voting Platform
 
 Who uses the system?
