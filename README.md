@@ -8,7 +8,7 @@ Online Voting System
 
 Features:
 Voting,
-Event Request,
+Voting Event Request,
 Responsive User Interface,
 Multi-Purpose Voting Platform
 
